@@ -1,0 +1,188 @@
+body {
+    background-color: var(--burlywood);
+    background-image: url('img/wave.png');
+    background-size: 1500px;
+	font-family: 'Chicle', serif;
+	font-size: 24px;
+}
+
+/* ------------------- UTILITIES ------------------ */
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+}
+
+.col-1 {
+	grid-column: span 1;
+}
+  
+.col-2 {
+	grid-column: span 2;
+}
+  
+.col-3 {
+	grid-column: span 3;
+}
+  
+.col-4 {
+	grid-column: span 4;
+}
+  
+.col-5 {
+	grid-column: span 5;
+}
+  
+.col-6 {
+	grid-column: span 6;
+}
+
+.padding {
+	padding: 10px;
+}
+
+.margin {
+	margin: 10px;
+}
+
+/* ---------------- END OF UTILITIES -------------- */
+
+
+/* ------------------- VARIABLES ------------------ */
+
+:root {
+/* Colours */
+--brown: rgb(184 , 125 , 23);
+--burlywood: rgb(222, 184, 135);
+--black: rgb(0, 0, 0);
+--white: rgb(255, 255, 255);
+--red: rgb(188, 41, 41);
+}
+
+/* ----------------- END OF VARIABLES -------------- */
+
+
+/* -------------------- WAVY TEXT ------------------ */
+
+/* This part (wavy text) of the code is gathered from geeksforgeeks.org */
+
+.wavy { 
+	position: relative; 
+} 
+
+.wavy span { 
+	position: relative; 
+	display: inline-block; 
+	color: var(--black); 
+	font-family: 'Bungee Inline', serif;
+	font-size: 45px;
+	animation: animate 2s ease-in-out infinite; 
+	animation-delay: calc(0.1s * var(--i)); 
+} 
+
+@keyframes animate { 
+	0% { 
+		transform: translateY(0px); 
+	} 
+
+	20% { 
+		transform: translateY(-20px); 
+	} 
+
+	40%, 
+	100% { 
+		transform: translateY(0px); 
+	} 
+} 
+
+/* --------------- END OF WAVY TEXT ---------------- */
+
+
+/* h1 {
+	font-family: 'Bungee Shade', serif;
+	font-size: 40px;
+	border: 1px solid var(--black);
+} */
+
+h2 {
+	font-family: 'Bungee', serif;
+	font-size: 30px;
+	border:none;
+	/* margin: 0; */
+}
+
+h4 {
+	color: var(--red);
+}
+
+section {
+	min-height: 400px;
+	width: 800px;
+}
+	  
+#add-contacts {
+	border-radius: 20px;
+}
+
+#phonebook {
+	border-radius: 20px;
+}
+
+input[type=text] {
+	border: none;
+	border-bottom: 2px solid var(--brown);
+	border-radius: 4px;
+	background-color: var(--burlywood);
+  	color: rgb(0, 0, 0);
+	font-family: 'Chicle';
+	font-size: 20px;
+}
+
+#image img {
+	max-width: 100%;
+	border-radius: 20px;
+	max-height: 300px;
+}
+
+.add-contact-btn {
+	background-color: var(--brown);
+	color: var(--white);
+	padding: 16px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 10px;
+	cursor: grab;
+	width: 95%;
+	font-family: 'Bungee';
+	font-size: 20px;
+  }
+
+.buttons {
+    background-color: var(--brown);
+	color:  var(--white);
+	padding: 10px 1px;
+	margin: 8px 5px;
+	border: none;
+	border-radius: 10px;
+	cursor: grab;
+	width: 45%;
+	font-family: 'Bungee';
+	font-size: 10px;
+  }
+
+.contact {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.contact div {
+	padding-top: 8px;
+	padding-right: 5px;
+}
+
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+

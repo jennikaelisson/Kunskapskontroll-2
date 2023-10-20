@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Hairline&family=Bungee+Inline&family=Bungee+Shade&family=Chicle&family=Fascinate+Inline&family=Molle&family=Spicy+Rice&display=swap" rel="stylesheet">
+    <title>Telefonbok - Kunskapskontroll 2</title>
+</head>
+<body>
+    <section class="grid">
+        <div class="col-6 padding margin wavy"> 
+            <span style="--i:1">J</span> 
+            <span style="--i:2">E</span> 
+            <span style="--i:3">N</span> 
+            <span style="--i:4">N</span> 
+            <span style="--i:5">I</span> 
+            <span style="--i:6">K</span> 
+            <span style="--i:7">A</span> 
+            <span style="--i:8">'</span> 
+            <span style="--i:9">S</span> 
+            <span style="--i:10"> </span> 
+            <span style="--i:11"> </span> 
+            <span style="--i:12"> </span> 
+            <span style="--i:13">P</span> 
+            <span style="--i:14">H</span> 
+            <span style="--i:15">O</span> 
+            <span style="--i:16">N</span> 
+            <span style="--i:17">E</span> 
+            <span style="--i:18">B</span>
+            <span style="--i:19">O</span> 
+            <span style="--i:20">O</span> 
+            <span style="--i:21">K</span>  
+        </div> 
+        <div id="add-contacts" class="grid col-4 padding margin">
+            <h2 class="col-6">Add my contacts here!</h2>
+            <div id="add-form" class="grid col-6">
+                <label for="name" class="col-2 margin"><b>Name</b></label>
+                <input type="text" id="name-input" class="col-4 margin" placeholder="Enter your name">
+            
+                <label for="number" class="col-2 margin"><b>Phone number</b></label>
+                <input type="text" id="number-input" class="col-4 margin" placeholder="Enter your phone number">
+            
+                <button type="submit" class="add-contact-btn col-3" onclick="validateForm(document.getElementById('name-input').value, document.getElementById('number-input').value, document.getElementById('contact-list'))">Add contact</button>
+            </div>
+        </div>
+        <div id="image" class="col-2 padding margin">
+            <img src="img/phone-woman.jpg" alt="Retro phone">
+        </div>
+        <div id="phonebook" class="grid col-6 padding margin">
+            <h2 class="col-6">List of contacts</h2>
+            <div id="contact-list" class="col-6">
+                <ul id="contacts">
+                    <!-- Contacts will be added here -->
+                </ul>
+            </div>
+            
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
