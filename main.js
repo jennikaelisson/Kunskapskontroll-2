@@ -2,7 +2,6 @@ let nameInput = document.getElementById('name-input');
 let numberInput = document.getElementById('number-input');
 let contacts = [];
 let isEditing = false;
-let isError = false;  // Flag to track if there's an error
 
 // Function to create a contact element
 function createContactElement(contact) {
@@ -90,7 +89,7 @@ function validateForm(nameInput, numberInput) {
         let addForm = document.getElementById('add-form');
         errorMessage = document.createElement('h4');
         errorMessage.id = 'error-message';
-        errorMessage.textContent = 'Forgot something? Both name and number need to be entered before adding a contact!';
+        errorMessage.textContent = 'Forgot something? Add both a name and a number!';
         errorMessage.classList.add('col-6');
         addForm.appendChild(errorMessage);
     }
@@ -122,13 +121,14 @@ function createDeleteButton(contact, contactItem) {
     deleteButton.classList.add('buttons');
     deleteButton.addEventListener('click', function() {
         handleDeleteClick(contact, contactItem);
-    });    return deleteButton;
+    });    
+    return deleteButton;
 }
 
 // Function to manage what happens in the event listener on edit button
 function handleEditClick(nameInput, numberInput, editButton) {
     // Reset the error flag and remove any previously displayed error messages
-    // let isError = false;
+    let isError = false; // Flag to track if there's an error
     let errorMessage2 = document.getElementById('error-message2');
     if (errorMessage2) {
         errorMessage2.remove();
